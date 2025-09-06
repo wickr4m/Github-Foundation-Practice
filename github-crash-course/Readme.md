@@ -6,4 +6,4 @@
 
 ## Stashing
 
-## Merging
+## Mergings
