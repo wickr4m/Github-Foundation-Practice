@@ -12,7 +12,9 @@ mkdir /workspaces/tmp && cd tmp
 ```sh
 git clone https://github.com/spB0B/Github-Foundation-Practice.git
 ```
+>may need a FGT to push commit from a local workspace if you haven't signed into the GitHub from that workspace
 
+go to settings > developer options
 
 ## Git Hidden folder
 
@@ -41,3 +43,7 @@ the `-m` flag gives the commit message from the terminal. that way we don't have
 ## Push
 
 this is me trying to push the the changes after cloning the repository to my local workspace. first I cloned the repo using `git clone` and then now I am trying to do `git push` from this local env. 
+
+### FGT -Fine Grained Token
+
+FGT is a one time appearing token that allows us to use instead of the password. we can set permissions, valid time period for FGT. nothing will cache that value.
