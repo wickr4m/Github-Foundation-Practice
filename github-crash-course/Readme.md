@@ -61,6 +61,23 @@ the `-m` flag gives the commit message from the terminal. that way we don't have
 
 ## Branches
 
+Branches are used as a path of development. we can create a branch using
+```sh
+git branch "branch-name"
+```
+then we can see available branches using 
+```sh
+git branch
+```
+we will use branches to add a new feature or separate someones work from main branch.We also can change branches 
+```sh
+git checkout "branch-name"
+```
+after chaning the brnach we can commit and push changes to that branch
+```sh
+git push --set-upstream origin dev
+```
+ after this there will be a new branch of the main that hass all the content of the main branch and some extra files that are not in the main branch.
 ## Remotes
 
 ## Stashing
