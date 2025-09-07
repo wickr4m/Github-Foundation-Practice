@@ -14,7 +14,13 @@ git clone https://github.com/spB0B/Github-Foundation-Practice.git
 ```
 >may need a FGT to push commit from a local workspace if you haven't signed into the GitHub from that workspace
 
-go to settings > developer options
+go to settings > developer option
+
+### SSH
+```ssh
+git@github.com:spB0B/Github-Foundation-Practice.git
+```
+> you may need to create a ssh key first in order to clone the repository
 
 ## Git Hidden folder
 
@@ -47,3 +53,27 @@ this is me trying to push the the changes after cloning the repository to my loc
 ### FGT -Fine Grained Token
 
 FGT is a one time appearing token that allows us to use instead of the password. we can set permissions, valid time period for FGT. nothing will cache that value.
+
+### GitHub SSH keys
+
+In settings > SSH and GPG keys you can add a SSH key. then only you can clone a repository using ssh,which is the most convinent way of doing it because it doesn't need every time password when we clone the repo.
+#### steps
+1. In your local workspace terminal create the key using
+```sh
+ssh-keygen -t ed25519 -C "email in your github account"
+```
+>In this step you can either use ECC or RSA. here ECC is used.
+>you can choose a location and a passphase as you prefer which can imporve the security of your key.
+2.Then tou have to start the SSH agent and add the key
+```sh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+this loads the private key to memory so you don't have to use that evey time you use that to get into github. Finally if you don't want caching the key you can modify the file `~/.ssh/config` or use the private key directly to access the git `ssh -i ~/.ssh/id_ed22519 "github ssh link"`
+
+>~/.ssh/id_ed25519 can be changed. if you have changed the location of the key in step 1. so use the proper location here
+3. Copy the public key
+```sh
+pbcopy < ~/.ssh/id_ed25519.pb
+```
+Copy the public key and paste it in the key section of the GitHub. Now you can clone the repo using the command `ssh git@github.com:spB0B/Github-Foundation-Practice.git`
