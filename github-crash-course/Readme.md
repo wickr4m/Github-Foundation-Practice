@@ -22,6 +22,27 @@ git@github.com:spB0B/Github-Foundation-Practice.git
 ```
 > you may need to create a ssh key first in order to clone the repository
 
+### GitHub CLI
+
+When using the GitHub CLI we forst have to install it. In my case I had to use Homebrew to install it using `homebrew install gh`. After installing you can check whether it is installed using the command `gh --version`
+```sh
+homebrew install gh
+```
+
+then you have to frist login to the CLI
+```sh
+gh auth login
+```
+I tried to do something before loging in but it just prompt to login. After logi we can do so much things we can try `gh` to see what we can do. the terminal prompts us to chose options:
+> GitHub.com > SSH > "public key" > title for the pub key > login with web browser
+
+I chose this order. but I tried to chose authentication token, it didn't work. This way CLI automatically creates a SSH key in out account and prompts us a web browser to authentication.
+
+after authentication we can use CLI to clone the repo using:
+```sh
+gh repo clone spB0B/Github-Foundation-Practice
+```
+
 ## Git Hidden folder
 
 There is a hidden folder inside that cloned repository called `.git`. It has things like `HEAD, config, description, hooks, index, info, logs, objects, packed-refs, refs`. some of the things are encoded but some files has important things like url of this repo.
@@ -60,7 +81,7 @@ In settings > SSH and GPG keys you can add a SSH key. then only you can clone a 
 #### steps
 1. In your local workspace terminal create the key using
 ```sh
-ssh-keygen -t ed25519 -C "email in your github account"
+ssh-keygen -t ed25519/rsa -C "email in your github account"
 ```
 >In this step you can either use ECC or RSA. here ECC is used.
 >you can choose a location and a passphase as you prefer which can imporve the security of your key.
