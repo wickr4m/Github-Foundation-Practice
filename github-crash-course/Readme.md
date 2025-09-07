@@ -84,6 +84,18 @@ git push --set-upstream origin dev
 
 ## Mergings
 
+This is used to connect two brances or subs into main. always shout update the structure before merging to avoid crashes
+```sh
+git fetch
+```
+>is used to update the repo in the loal environment.
+
+then we can 
+```sh
+git merge main dev
+```
+this pormpts a message as well we have to enter the message and `esc` then type `:wq` to save and exit.
+
 ## Push
 
 this is me trying to push the the changes after cloning the repository to my local workspace. first I cloned the repo using `git clone` and then now I am trying to do `git push` from this local env. 
