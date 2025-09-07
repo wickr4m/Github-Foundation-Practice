@@ -37,3 +37,7 @@ the `-m` flag gives the commit message from the terminal. that way we don't have
 ## Stashing
 
 ## Mergings
+
+## Push
+
+this is me trying to push the the changes after cloning the repository to my local workspace. first I cloned the repo using `git clone` and then now I am trying to do `git push` from this local env. 
