@@ -73,7 +73,11 @@ we will use branches to add a new feature or separate someones work from main br
 ```sh
 git checkout "branch-name"
 ```
-
+after chaning the brnach we can commit and push changes to that branch
+```sh
+git push --set-upstream origin dev
+```
+ after this there will be a new branch of the main that hass all the content of the main branch and some extra files that are not in the main branch.
 ## Remotes
 
 ## Stashing
